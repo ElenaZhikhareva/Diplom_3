@@ -37,15 +37,13 @@ public class RegistrationPage {
         driver.findElement(linkEnter).click();
     }
 
-
-
     //проверка, что есть "Некорректный пароль"
     public boolean invalidPasswordMessageIsDisplayed() {
         return driver.findElement(invalidPasswordMessage).isDisplayed();
     }
 
     //Проверка, что есть кнопка Зарегистрироваться
-    public boolean checkRegisterVisible(){
+    public boolean checkRegisterVisible() {
         return driver.findElement(registeredButton).isDisplayed();
     }
 }

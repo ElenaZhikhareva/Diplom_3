@@ -14,19 +14,24 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
+
     //нажатие на кнопку "Зарегистироваться"
     public void clickLinkRegister() {
         driver.findElement(linkRegistration).click();
     }
+
     public void fillEmailField(String email) {
         driver.findElement(emailField).sendKeys(email);
     }
+
     public void fillPasswordField(String password) {
         driver.findElement(passwordField).sendKeys(password);
     }
+
     public void clickButtonEnter() {
         driver.findElement(enterButton).click();
     }
+
     public void clickLinkForgotPassword() {
         driver.findElement(linkForgotPassword).click();
     }

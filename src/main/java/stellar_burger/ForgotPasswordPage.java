@@ -11,7 +11,7 @@ public class ForgotPasswordPage {
         this.driver = driver;
     }
 
-    public void clickLinkEnter(){
+    public void clickLinkEnter() {
         driver.findElement(linkEnter).click();
     }
 }

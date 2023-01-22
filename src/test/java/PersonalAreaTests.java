@@ -55,6 +55,7 @@ public class PersonalAreaTests {
     //Выход по кнопке «Выйти» в личном кабинете
     @Test
     public void checkExitFromPersonalRoomTest() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         objMainPage.clickPersonalAreaButton();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         objPersonalAreaPage.clickExitButton();

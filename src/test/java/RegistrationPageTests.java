@@ -40,7 +40,7 @@ public class RegistrationPageTests {
 
     //Ошибка для некорректного пароля. Минимальный пароль — шесть символов.
     @Test
-    public void checkInvalidPasswordTest(){
+    public void checkInvalidPasswordTest() {
         objRegistrationPage.fillNameField("Елена");
         objRegistrationPage.fillEmailField("123@gmail.ru");
         objRegistrationPage.fillPasswordField("123");
@@ -52,5 +52,4 @@ public class RegistrationPageTests {
     public void teardown() {
         driver.quit();
     }
-
 }
