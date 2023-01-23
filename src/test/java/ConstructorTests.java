@@ -22,21 +22,21 @@ public class ConstructorTests {
     public void goToBunsTest() {
         objMainPage.clickLinkSouse();
         objMainPage.clickLinkBuns();
-        Assert.assertTrue(objMainPage.textBunsIsDisplayed());
+        Assert.assertEquals("Булки", objMainPage.textBunsIsDisplayed());
     }
 
     //Переход к разделу «Соусы»
     @Test
     public void goToSouseTest() {
         objMainPage.clickLinkSouse();
-        Assert.assertTrue(objMainPage.textSouseIsDisplayed());
+        Assert.assertEquals("Соусы", objMainPage.textSouseIsDisplayed());
     }
 
     //Переход к разделу «Начинки»
     @Test
     public void goToFillsTest() {
         objMainPage.clickLinkFills();
-        Assert.assertTrue(objMainPage.textFillsIsDisplayed());
+        Assert.assertEquals("Начинки", objMainPage.textFillsIsDisplayed());
     }
 
     @After

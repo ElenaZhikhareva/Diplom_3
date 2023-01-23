@@ -51,15 +51,15 @@ public class MainPage {
         driver.findElement(linkFills).click();
     }
 
-    public boolean textBunsIsDisplayed() {
-        return driver.findElement(textBuns).isDisplayed();
+    public String textBunsIsDisplayed() {
+        return driver.findElement(textBuns).getText();
     }
 
-    public boolean textSouseIsDisplayed() {
-        return driver.findElement(textSouse).isDisplayed();
+    public String textSouseIsDisplayed() {
+        return driver.findElement(textSouse).getText();
     }
 
-    public boolean textFillsIsDisplayed() {
-        return driver.findElement(textFills).isDisplayed();
+    public String textFillsIsDisplayed() {
+        return driver.findElement(textFills).getText();
     }
 }
