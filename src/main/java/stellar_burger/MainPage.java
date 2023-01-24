@@ -10,12 +10,10 @@ public class MainPage {
     private final By personalAreaButton = By.xpath(".//p[text() = 'Личный Кабинет']"); //Кнопка "Личный кабинет"
     private final By checkoutButton = By.xpath(".//button[text() = 'Оформить заказ']");//Кнопка "Оформить заказ"
     private final By makeBurgerText = By.xpath(".//h1[text() = 'Соберите бургер']");//Текст "Соберите бургер"
-    private final By linkBuns = By.xpath(".//span[text() = 'Булки']");//Ссылка на "Булки"
-    private final By textBuns = By.xpath(".//h2[text() = 'Булки']");//h2 "Булки"
-    private final By linkSouse = By.xpath(".//span[text() = 'Соусы']");//Ссылка на "Соусы"
-    private final By textSouse = By.xpath(".//h2[text() = 'Соусы']");//h2 "Cоусы"
-    private final By linkFills = By.xpath(".//span[text() = 'Начинки']");//Ссылка на "Начинки"
-    private final By textFills = By.xpath(".//h2[text() = 'Начинки']"); //h2 "Cоусы"
+    private final By bunsButton = By.xpath(".//div[@style]/div[1]");//кнопка Булки в меню
+    private final By souseButton = By.xpath(".//div[@style]/div[2]");//кнопка Соусы в меню
+    private final By fillsButton = By.xpath(".//div[@style]/div[3]");//кнопка Начинки в меню
+
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -40,26 +38,27 @@ public class MainPage {
     }
 
     public void clickLinkBuns() {
-        driver.findElement(linkBuns).click();
+        driver.findElement(bunsButton).click();
+    }
+
+    public String getClassNameBun() {
+        return driver.findElement(bunsButton).getAttribute("class");
     }
 
     public void clickLinkSouse() {
-        driver.findElement(linkSouse).click();
+        driver.findElement(souseButton).click();
+    }
+
+    public String getClassNameSouse() {
+        return driver.findElement(souseButton).getAttribute("class");
     }
 
     public void clickLinkFills() {
-        driver.findElement(linkFills).click();
+        driver.findElement(fillsButton).click();
     }
 
-    public String textBunsIsDisplayed() {
-        return driver.findElement(textBuns).getText();
+    public String getClassNameFills() {
+        return driver.findElement(fillsButton).getAttribute("class");
     }
 
-    public String textSouseIsDisplayed() {
-        return driver.findElement(textSouse).getText();
-    }
-
-    public String textFillsIsDisplayed() {
-        return driver.findElement(textFills).getText();
-    }
 }

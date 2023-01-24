@@ -1,11 +1,12 @@
+import org.hamcrest.MatcherAssert;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import stellar_burger.MainPage;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static stellar_burger.MainPage.BASE_URL;
 
 public class ConstructorTests {
@@ -22,21 +23,21 @@ public class ConstructorTests {
     public void goToBunsTest() {
         objMainPage.clickLinkSouse();
         objMainPage.clickLinkBuns();
-        Assert.assertEquals("Булки", objMainPage.textBunsIsDisplayed());
+        MatcherAssert.assertThat(objMainPage.getClassNameBun(), containsString("current"));
     }
 
     //Переход к разделу «Соусы»
     @Test
     public void goToSouseTest() {
         objMainPage.clickLinkSouse();
-        Assert.assertEquals("Соусы", objMainPage.textSouseIsDisplayed());
+        MatcherAssert.assertThat(objMainPage.getClassNameSouse(), containsString("current"));
     }
 
     //Переход к разделу «Начинки»
     @Test
     public void goToFillsTest() {
         objMainPage.clickLinkFills();
-        Assert.assertEquals("Начинки", objMainPage.textFillsIsDisplayed());
+        MatcherAssert.assertThat(objMainPage.getClassNameFills(), containsString("current"));
     }
 
     @After
